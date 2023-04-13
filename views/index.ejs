@@ -54,6 +54,29 @@
         </div>
    
 </form>
+        <div id="list-container">
+            <ul>
+                <% for (let i of todoList) {%>
+                <li id="todo">
+                    <div id="list-details">
+                        <div id="data">
+                            <!-- <i class="fa-regular fa-square fa-2x fa-bold fa-fw"></i> -->
+                            <div id="box-and-desc">
+                            <input type="checkbox" class="checkbox" name="">
+                        <p id="show-description"><%= i.description %></p>
+                    </div>
+                        <p id="show-category"><%= i.category %></p>
+                    </div>
+                    <div id="calender">
+                    <i class="fa fa-calendar fa-lg"></i>
+                    <p id="show-date"><%= i.date %></p>
+                </div>
+                    </div>
+                </li>
+                <% } %>
+            </ul>
+
+        </div>
 
     
 
