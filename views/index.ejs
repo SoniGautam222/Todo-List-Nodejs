@@ -36,8 +36,6 @@
         <div id="date">
             <p>DUE DATE</p>
            <input type="date" id="date-format" name="date" required>
-                   
-
         </div>
     </div>
  
@@ -46,14 +44,13 @@
                 <i class="fa fa-plus"></i>
                 Add Task
             </button>
-
-            <button id="delete-button">
-                <i class="fa fa-trash"></i>
-                Delete Tasks
-            </button>
-        </div>
-   
+        </div>   
 </form>
+   
+     <form action="/delete" method="POST">
+        <!-- <i class="fa fa-delete"></i> -->
+            <input type="submit" value="delete Tasks" id="delete-button">
+      
         <div id="list-container">
             <ul>
                 <% for (let i of todoList) {%>
@@ -62,7 +59,7 @@
                         <div id="data">
                             <!-- <i class="fa-regular fa-square fa-2x fa-bold fa-fw"></i> -->
                             <div id="box-and-desc">
-                            <input type="checkbox" class="checkbox" name="">
+                            <input type="checkbox" class="checkbox" name="check" value="<%= i._id %>">
                         <p id="show-description"><%= i.description %></p>
                     </div>
                         <p id="show-category"><%= i.category %></p>
@@ -75,13 +72,8 @@
                 </li>
                 <% } %>
             </ul>
-
         </div>
-
-    
-
-    
-
+    </form>
     <script src="/assets/script.js"></script>
 </body>
 </html>
