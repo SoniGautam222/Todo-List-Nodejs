@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title><%= locals.title %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>TODO App</h1>
+
+
+    <form id="fill-form" action="" method="post">
+        <div id="description-part">
+            <h2>DESCRIPTION</h2>
+            <input type="text" id="fill-description" name="description" placeholder="what do you need to do? " required >
+            
+        </div>
+
+        <div id="category-and-date">
+        <div id="category">
+            <p>CATEGORY</p>
+            <select id="select" name="category" required>
+                <option value="" selected>Choose a category</option>
+                <option value="School">School</option>
+                <option value="office">office</option>
+                <option value="work">work</option>
+                <option value="college">college</option>
+                <option value="task">task</option>
+                <option value="others">others</option>
+            </select>
+            
+        </div>
+        <div id="date">
+            <p>DUE DATE</p>
+           <input type="date" id="date-format" name="date" required>
+                   
+
+        </div>
+    </div>
+ 
+        <div id="btn">
+            <button id="add-task">
+                <i class="fa fa-plus"></i>
+                Add Task
+            </button>
+
+            <button id="delete-button">
+                <i class="fa fa-trash"></i>
+                Delete Tasks
+            </button>
+        </div>
+   
+</form>
+
+    
+
+    
+
+    <script src="/assets/script.js"></script>
+</body>
+</html>
