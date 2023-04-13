@@ -1,4 +1,6 @@
+// requiring the express here 
 const mongoose=require('mongoose');
+// creating the schema
 const todoSchema=new mongoose.Schema({
     description:{
         type:String,
@@ -14,4 +16,6 @@ const todoSchema=new mongoose.Schema({
     }
 });
 const Schema=mongoose.model('Schema',todoSchema);
+
+// exporting the schema
 module.exports=Schema;

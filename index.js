@@ -1,19 +1,22 @@
+// require the express here 
 const express=require('express');
 const port=8000;
 const path=require('path');
 const db=require('./config/mongoose');
 const app=express();
 
+// setting the ejs 
 app.set('view engine', 'ejs');
 app.set('views',path.join(__dirname,'views'));
 
 app.use(express.urlencoded());
 app.use(express.static("assets"));
 
+// get the schema
 const Schema=require('./models/Schema')
 
-var todoList=[];
 
+// get the router and the controller here
 app.get('/',async function(req,res){
     let lists=await Schema.find({});
      res.render('index',{
@@ -21,6 +24,7 @@ app.get('/',async function(req,res){
     });
 });
 
+// to create the new todo list item
 app.post('/',async function(req,res){
     try{
         let todo=await Schema.create({
@@ -35,14 +39,14 @@ app.post('/',async function(req,res){
     return res.redirect('/');    
 });
 
+
+// to delete the item from the todo list 
 app.post('/delete',async function(req,res){
     try{
     let checkedItemid=req.body.check;
     await Schema.findByIdAndDelete(checkedItemid);
     
     res.redirect('back');
-   
-   
     }
     catch(err){
         console.log("got the error");

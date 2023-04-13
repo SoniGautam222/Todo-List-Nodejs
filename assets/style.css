@@ -6,6 +6,7 @@
 body{
 background-image: linear-gradient(to right, lightblue,pink);  
 }
+/* heading styling */
 h1{
     text-align: center;
     font-size: 2rem;
@@ -14,7 +15,7 @@ h1{
     border-bottom: 1px solid grey;
     font-family: monospace;
 }
-
+/* styling the description part */
 #description-part{
     /* color: darkgray; */
     height: 100px;
@@ -61,7 +62,7 @@ p{
     display: flex;
 
 }
-
+/* styling the date part over here */
 #date {
     border-bottom: 1px solid grey;
     /* border: 2px solid black;  */
@@ -93,6 +94,7 @@ p{
     cursor: pointer;
     /* display: flex; */
 }
+/* when over hover the add button */
 #add-task:hover{
     background-color: lightblue;
     color: black;
@@ -142,6 +144,7 @@ p{
     /* text-align: center; */
     margin-bottom: -20px;
 }
+/* the description part which will be show to us after filled up */
 #show-description{
     /* border: 2px solid red; */
     margin-top: -20px;
@@ -172,6 +175,7 @@ ul {
     font-size: 1rem;
     width: 800px;
 }
+/* the calender styling */
 #calender{
     display: flex;
     margin-left: 10px;
